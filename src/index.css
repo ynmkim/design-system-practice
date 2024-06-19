@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'LINESeedSansKR';
+    src:
+      url('/font/KR/eot/LINESeedKR-Th.eot') format('eot'),
+      url('/font/KR/woff/LINESeedKR-Th.woff') format('woff'),
+      url('/font/KR/woff2/LINESeedKR-Th.woff2') format('woff2');
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'LINESeedSansKR';
+    src:
+      url('/font/KR/eot/LINESeedKR-Rg.eot') format('eot'),
+      url('/font/KR/woff/LINESeedKR-Rg.woff') format('woff'),
+      url('/font/KR/woff2/LINESeedKR-Rg.woff2') format('woff2');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'LINESeedSansKR';
+    src:
+      url('/font/KR/eot/LINESeedKR-Bd.eot') format('eot'),
+      url('/font/KR/woff/LINESeedKR-Bd.woff') format('woff'),
+      url('/font/KR/woff2/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'LINESeedSansEN';
+    src:
+      url('/font/EN/eot/LINESeedSans_W_Th.eot') format('eot'),
+      url('/font/EN/woff/LINESeedSans_W_Th.woff') format('woff'),
+      url('/font/EN/woff2/LINESeedSans_W_Th.woff2') format('woff2');
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: 'LINESeedSansEN';
+    src:
+      url('/font/EN/eot/LINESeedSans_W_Rg.eot') format('eot'),
+      url('/font/EN/woff/LINESeedSans_W_Rg.woff') format('woff'),
+      url('/font/EN/woff2/LINESeedSans_W_Rg.woff2') format('woff2');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'LINESeedSansEN';
+    src:
+      url('/font/EN/eot/LINESeedSans_W_Bd.eot') format('eot'),
+      url('/font/EN/woff/LINESeedSans_W_Bd.woff') format('woff'),
+      url('/font/EN/woff2/LINESeedSans_W_Bd.woff2') format('woff2');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'LINESeedSansEN';
+    src:
+      url('/font/EN/eot/LINESeedSans_W_XBd.eot') format('eot'),
+      url('/font/EN/woff/LINESeedSans_W_XBd.woff') format('woff'),
+      url('/font/EN/woff2/LINESeedSans_W_XBd.woff2') format('woff2');
+    font-weight: 800;
+  }
+  @font-face {
+    font-family: 'LINESeedSansEN';
+    src:
+      url('/font/EN/eot/LINESeedSans_W_He.eot') format('eot'),
+      url('/font/EN/woff/LINESeedSans_W_He.woff') format('woff'),
+      url('/font/EN/woff2/LINESeedSans_W_He.woff2') format('woff2');
+    font-weight: 900;
+  }
+  body {
+    font-family: 'LINESeedSansKR';
+  }
+}
