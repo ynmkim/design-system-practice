@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import Label from '../components/Label';
 
 const meta = {
@@ -21,6 +20,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     htmlFor: 'username',
-    children: '이메일',
+    children: 'Title',
   },
 };

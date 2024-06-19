@@ -4,7 +4,7 @@ interface ILabelProps {
 }
 export default function Lebel({ htmlFor, children }: ILabelProps) {
   return (
-    <label htmlFor={htmlFor} className="text-title-m text-blue-600">
+    <label htmlFor={htmlFor} className="text-base font-bold">
       {children}
     </label>
   );

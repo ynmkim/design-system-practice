@@ -1,5 +1,3 @@
-import { ReactHTMLElement } from 'react';
-
 interface IIconButtonProps {
   iconPath: string;
   iconAlt: string;

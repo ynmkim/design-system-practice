@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
 import ErrorMessage from '../components/ErrorMessage';
 
 const meta = {
@@ -10,7 +9,7 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    children: { control: 'text', description: 'ErrorMessage의 텍스트' },
+    children: { control: 'text', description: '에러 메시지의 텍스트' },
   },
 } satisfies Meta<typeof ErrorMessage>;
 
@@ -19,6 +18,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: '에러 메시지',
+    children: 'Please enter a Error description.',
   },
 };
