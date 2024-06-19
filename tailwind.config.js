@@ -129,7 +129,6 @@ export default {
         'navy-800': '#323B54',
         'navy-850': '#262F4A',
         'navy-900': '#202A43',
-
         red: '#FF334B',
       },
       spacing: {
