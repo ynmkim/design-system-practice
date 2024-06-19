@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 interface ITextInput {
   type: string;
+  id: string;
   name: string;
   placeholder: string;
   value: string;
@@ -17,6 +18,7 @@ interface ITextInput {
 
 export default function TextInput({
   type,
+  id,
   name,
   placeholder,
   value,
@@ -35,14 +37,15 @@ export default function TextInput({
       : 'border-blue-600';
 
   return (
-    <div className="flex flex-col gap-y-2">
+    <div className="relative flex flex-col gap-y-2">
       <div
-        className={`flex items-center gap-x-2 h-[50px] p-4 rounded-md border ${borderColor}`}
+        className={`flex justify-between items-center gap-x-2 h-[50px] px-4 rounded-md border ${borderColor}`}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       >
         <input
           type={type}
+          id={id}
           name={name}
           placeholder={placeholder}
           value={value}
@@ -58,7 +61,11 @@ export default function TextInput({
           />
         )}
       </div>
-      {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
+      {isError && (
+        <ErrorMessage className="absolute top-full mt-1">
+          {errorMessage}
+        </ErrorMessage>
+      )}
     </div>
   );
 }

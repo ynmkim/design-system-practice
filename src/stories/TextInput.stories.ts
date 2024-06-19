@@ -15,6 +15,11 @@ const meta = {
       description: 'input의 type 속성',
       defaultValue: 'text',
     },
+    id: {
+      console: 'text',
+      description: 'intut의 id 속성',
+      defaultValue: 'text',
+    },
     name: {
       control: 'text',
       description: 'input의 name 속성',
@@ -65,8 +70,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     type: 'text',
-    name: 'username',
-    placeholder: 'Typing',
+    id: 'email',
+    name: 'email',
+    placeholder: '이메일을 입력해 주세요.',
     value: '',
     iconPath: '/icons/ic-cancel-white.svg',
     iconAlt: '취소',
