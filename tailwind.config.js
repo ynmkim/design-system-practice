@@ -148,6 +148,13 @@ export default {
         'spacing-1300': '52px',
         'spacing-1400': '56px',
       },
+      borderRadius: {
+        'radius-100': '3px',
+        'radius-200': '5px',
+        'radius-300': '7px',
+        'radius-400': '12px',
+        'radius-circle': '50%',
+      },
     },
   },
   plugins: [],
