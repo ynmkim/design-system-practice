@@ -30,11 +30,13 @@ export default function TextInput({
   isError,
 }: ITextInput) {
   const [isFocused, setIsFocused] = useState(false);
-  const borderColor = isFocused
-    ? 'border-blue-600'
-    : !value
-      ? 'border-gray-350'
-      : 'border-blue-600';
+  const borderColor = isError
+    ? 'border-red'
+    : isFocused
+      ? 'border-blue-600'
+      : !value
+        ? 'border-gray-350'
+        : 'border-blue-600';
 
   return (
     <div className="relative flex flex-col gap-y-2">
