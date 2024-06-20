@@ -16,7 +16,7 @@ export default function IconButton({
     <button
       type="button"
       onClick={onClick}
-      className={`flex justify-center items-center w-5 h-5 rounded-full bg-gray-350 ${className}`}
+      className={`flex justify-center items-center ${className}`}
     >
       <img src={iconPath} alt={iconAlt} />
     </button>

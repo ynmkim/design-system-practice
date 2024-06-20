@@ -28,7 +28,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    iconPath: '/icons/ic-cancel-white.svg',
+    iconPath: '/icons/ic-close.svg',
     iconAlt: '아이콘 이미지',
   },
 };

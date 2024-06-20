@@ -59,7 +59,7 @@ export default function TextInput({
             iconPath={iconPath}
             iconAlt={iconAlt}
             onClick={onIconClick}
-            className="shrink-0"
+            className="shrink-0 w-5 h-5 rounded-full bg-gray-350"
           />
         )}
       </div>
