@@ -5,14 +5,34 @@ import TextInput from './components/TextInput';
 
 function App() {
   const [isError, setIsError] = useState(false);
-  const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const [values, setValues] = useState({
+    email: '',
+    password: '',
+  });
+
+  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsError((prev) => !prev);
   };
 
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
+  };
+
+  const onIconClickHandler = () => {
+    setValues({
+      email: '',
+      password: '',
+    });
+  };
+
   return (
     <>
-      <form className="flex flex-col gap-y-12">
+      <form className="flex flex-col gap-y-12" onSubmit={onSubmitHandler}>
         <div className="flex flex-col gap-y-2">
           <Label htmlFor="email">이메일</Label>
           <TextInput
@@ -20,11 +40,11 @@ function App() {
             id="email"
             name="email"
             placeholder="이메일을 입력해 주세요."
-            value=""
-            onChange={() => {}}
-            iconPath=""
-            iconAlt=""
-            onIconClick={() => {}}
+            value={values.email}
+            onChange={onChangeHandler}
+            iconPath="/icons/ic-cancel-white.svg"
+            iconAlt="취소"
+            onIconClick={onIconClickHandler}
             errorMessage="이메일을 입력해 주세요."
             isError={isError}
           />
@@ -36,17 +56,17 @@ function App() {
             id="password"
             name="password"
             placeholder="비밀번호를 입력해 주세요."
-            value=""
-            onChange={() => {}}
-            iconPath=""
-            iconAlt=""
-            onIconClick={() => {}}
+            value={values.password}
+            onChange={onChangeHandler}
+            iconPath="/icons/ic-cancel-white.svg"
+            iconAlt="취소"
+            onIconClick={onIconClickHandler}
             errorMessage="비밀번호를 입력해 주세요."
             isError={isError}
           />
         </div>
 
-        <button onClick={onClickHandler}>제출</button>
+        <button type="submit">제출</button>
       </form>
     </>
   );
