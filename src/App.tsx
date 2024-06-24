@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import Label from './components/Label';
 import TextInput from './components/TextInput';
+import ChipList from './components/ChipList';
+import ActionButton from './components/ActionButton';
 
 function App() {
   const [isError, setIsError] = useState(false);
@@ -31,7 +33,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <form className="flex flex-col gap-y-12" onSubmit={onSubmitHandler}>
         <div className="flex flex-col gap-y-2">
           <Label htmlFor="email">이메일</Label>
@@ -65,10 +67,25 @@ function App() {
             isError={isError}
           />
         </div>
-
-        <button type="submit">제출</button>
+        <ActionButton
+          type="submit"
+          appreance="contained"
+          isDisabled={false}
+          onClick={() => {}}
+        >
+          제출
+        </ActionButton>
       </form>
-    </>
+      <br />
+      <ChipList
+        chipList={['고양이', '강아지', '용', '토끼']}
+        appreance="contained"
+        size="medium"
+        onClick={() => {
+          console.log('hello');
+        }}
+      />
+    </div>
   );
 }
 
