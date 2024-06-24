@@ -117,7 +117,7 @@ export default {
         'gray-850': '#1F1F1F',
         'gray-870': '#1A1A1A',
         'gray-900': '#111111',
-        black: '000000',
+        black: '#000000',
         'blue-400': '#96B2FF',
         'blue-500': '#638DFF',
         'blue-600': '#4D73FF',
