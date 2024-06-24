@@ -2,7 +2,7 @@ type ActionButtonAppreance = 'contained' | 'outlined' | 'ghost';
 type ButtonTypes = 'submit' | 'reset' | 'button';
 
 interface IActionButtonProps {
-  buttonType: ButtonTypes;
+  type: ButtonTypes;
   appreance: ActionButtonAppreance;
   isDisabled: boolean;
   children: string;
@@ -21,7 +21,7 @@ const appreanceTypes: Record<ActionButtonAppreance, string> = {
 };
 
 export default function ActionButton({
-  buttonType,
+  type,
   appreance,
   isDisabled,
   children,
@@ -29,7 +29,7 @@ export default function ActionButton({
 }: IActionButtonProps) {
   return (
     <button
-      type={buttonType}
+      type={type}
       onClick={onClick}
       className={`rounded-radius-200 w-full h-12 text-base font-bold ${appreanceTypes[appreance]} ${disabledStyle} hover:opacity-70 active:opacity-60 transition-opacity ease-in-out cursor-pointers`}
       disabled={isDisabled}

@@ -17,20 +17,20 @@ const meta = {
     ),
   ],
   argTypes: {
-    buttonType: {
+    type: {
       control: 'text',
-      description: '버튼의 type 속성',
+      description: 'button 태그의 type 속성',
       defaultValue: 'button',
     },
     appreance: {
       control: 'select',
       option: ['contained', 'outlined', 'ghost'],
-      description: '버튼의 type',
+      description: 'Button의 Types',
       defaultValue: 'contained',
     },
     isDisabled: {
       control: 'boolean',
-      description: '버튼의 비활성화 상태',
+      description: 'Button의 활성화 상태',
       defaultValue: true,
     },
     children: {
@@ -50,7 +50,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Contained: Story = {
   args: {
-    buttonType: 'button',
+    type: 'button',
     appreance: 'contained',
     isDisabled: false,
     children: 'Button',
@@ -59,7 +59,7 @@ export const Contained: Story = {
 
 export const Outlined: Story = {
   args: {
-    buttonType: 'button',
+    type: 'button',
     appreance: 'outlined',
     isDisabled: false,
     children: 'Button',
@@ -68,7 +68,7 @@ export const Outlined: Story = {
 
 export const Ghost: Story = {
   args: {
-    buttonType: 'button',
+    type: 'button',
     appreance: 'ghost',
     isDisabled: false,
     children: 'Button',
@@ -77,7 +77,7 @@ export const Ghost: Story = {
 
 export const Disabled: Story = {
   args: {
-    buttonType: 'button',
+    type: 'button',
     appreance: 'contained',
     isDisabled: true,
     children: 'Button',
