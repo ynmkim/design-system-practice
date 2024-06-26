@@ -40,7 +40,7 @@ export default function Chip({
 
   return (
     <button
-      className={`inline-flex justify-center items-center rounded-full ${appreanceTypes[appreance]} ${sizeTypes[size]} ${disabledStyle} hover:opacity-70 active:opacity-60 transition-opacity ease-in-out cursor-pointer`}
+      className={`inline-flex justify-center items-center rounded-full ${appreanceTypes[appreance]} ${sizeTypes[size]} ${disabledStyle} hover:opacity-70 active:opacity-50 transition-opacity ease-in-out cursor-pointer`}
       onClick={onClick}
     >
       <span>{children}</span>
