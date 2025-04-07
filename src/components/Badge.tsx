@@ -4,7 +4,7 @@ type BadgeProps =
   | { variant: 'number'; count: number };
 
 const baseStyle =
-  'inline-flex items-center justify-center text-xl font-semibold bg-green text-white text-[20px]  rounded-full';
+  'inline-flex items-center justify-center rounded-full bg-green font-sans text-[20px] font-semibold text-white ';
 
 const variantStyles = {
   new: 'w-[36px] h-[36px]',
