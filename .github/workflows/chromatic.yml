@@ -1,6 +1,4 @@
-# .github/workflows/chromatic.yml
-
-name: "Chromatic"
+name: 'Chromatic'
 
 on: push
 
@@ -15,7 +13,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.12.0
       - name: Install dependencies
         # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
         run: npm ci
