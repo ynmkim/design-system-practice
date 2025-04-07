@@ -105,7 +105,7 @@ export default {
         ],
       },
       colors: {
-        green: '#06C755',
+        green: '#1F4D1F',
         white: '#FFFFFF',
         'gray-100': '#FCFCFC',
         'gray-150': '#F5F5F5',
@@ -136,7 +136,7 @@ export default {
         'navy-800': '#323B54',
         'navy-850': '#262F4A',
         'navy-900': '#202A43',
-        red: '#FF334B',
+        red: '#85101E',
       },
       borderRadius: {
         'radius-100': '3px',
